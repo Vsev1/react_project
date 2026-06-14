@@ -1,5 +1,5 @@
 import NavMenu from "./NavMenu.jsx";
-import {useState} from "react";
+import {useCallback, useState} from "react";
 import { Link } from "react-router-dom";
 import Popup from "./Popup.jsx";
 function Header() {
@@ -20,9 +20,9 @@ function Header() {
         setIsPopupOpen(true);
     };
 
-    const closePopup = () => {
+    const closePopup = useCallback(() => {
         setIsPopupOpen(false);
-    };
+    }, []);
 
     return (
         <header className="absolute top-0 left-0 w-full z-50">

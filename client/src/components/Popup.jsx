@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {memo, useState} from "react";
 
 function Popup({isOpen, closePopup}){
 
@@ -109,4 +109,4 @@ function Popup({isOpen, closePopup}){
     );
 }
 
-export default Popup;
+export default memo(Popup);
